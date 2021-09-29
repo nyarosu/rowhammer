@@ -5,7 +5,7 @@ Experimental Linux kernel module that attempts to offer an in-kernel defence aga
 
 Rowhammer is a well-documented exploit that allows an attacker to corrupt data in memory. The attacker could find the memory address of a bit adjacent to the memory of interest, at which point they could repeatedly hammer that bit, and as the memory controller must rewrite the data after every read, this can cause neighbour bits to discharge slightly, potentially causing the bit to flip. 
 
-This leads to corruption of data. Due to it's platform-agnostic nature, it is extremely dangerous, however it is difficult to exploit since it is difficult to find memory adjacent to the data of interest to begin with.
+This leads to corruption of data. Due to the fact that it affects virtually all platforms, it is extremely dangerous, however it is difficult to exploit since it is difficult to find memory adjacent to the data of interest to begin with.
 
 # How can we defend against it?
 
