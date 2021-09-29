@@ -10,5 +10,5 @@ This leads to corruption of data. Due to the fact that it affects virtually all 
 # How can we defend against it?
 
 My implementation will work by implementing an interrupt for roughly every million cache misses. We can track the cache miss statistics using the PMU built into most modern CPUs.
-However, this comes at a price. Our module will trigger when cache-miss rate exceeds a certain amount, forcing the CPU to delay by about 64ms. Naturally, a 64-ms delay is far, far from ideal, and this will be especially noticeable on real-time and latency-sensitive systems. **Hence why this is tagged as experimental and I would strongly advise against importing into your kernel**
+However, this comes at a price. Our module will trigger when cache-miss rate exceeds a certain amount, forcing the CPU to delay by about 64ms. Naturally, a 64-ms delay is far, far from ideal, and this will be especially noticeable on real-time and latency-sensitive systems. **Hence why this is tagged as experimental and I would strongly advise against importing into your kernel**.
 
